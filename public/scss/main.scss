@@ -1,0 +1,703 @@
+@import 'partials/fonts';
+@import 'partials/nav';
+
+/*--------keyframes------*/
+
+@keyframes paragraph1{
+  from {transform: translateY(50vw);}
+  to {transform: translateY(1vw);}
+}
+
+@keyframes paragraph2{
+  from {transform: translateY(-37vh);}
+  to {transform: translateY(21vh);}
+}
+
+@keyframes arrow{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color:#4b7d3c; }
+  100% { transform: scale(1); }
+}
+
+@keyframes rabbit {
+  from {transform: translateX(200vw);}
+  to {transform: translateX(250vw);}  
+}  
+
+@keyframes paragraph3 {
+  from {transform: translateX(-50vw);}
+  to {transform: translateX(20px);}
+}
+
+@keyframes rabbit-hole-dots{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color:#369B1B; }
+  100% { transform: scale(1); }
+}
+
+@keyframes down-arrow{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color:#369B1B; }
+  100% { transform: scale(1); }
+}
+
+@keyframes hallway-dots{
+  0%{transform: rotate(0);}
+  100%{transform: rotate(1turn);}
+}
+
+@keyframes hallway-text{
+  from {transform: translateY(100vw);}
+  to {transform: translateY(1.5vw);}
+}
+
+@keyframes glass-table-dots {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color:#4b7d3c; }
+  100% { transform: scale(1); }
+}
+
+@keyframes glass-table-text{
+  from {transform: translateY(100vw);}
+  to {transform: translateY(1vw);}
+}
+
+@keyframes glimpse-text{
+  from {transform: translateX(-50vw);}
+  to {transform: translateX(20px);} 
+}
+
+
+/*----beginning main css----*/
+*{
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.opener {
+  font-family: $josefin;
+  opacity: 1;
+  z-index: 1;
+  border: 1.5em solid black;
+  width: 97vw;
+  height: 99vh;
+  
+  .dropcaps{
+    display: inline;
+    margin-bottom: -170px;
+    margin-right: -80px;
+    margin-top: -20px;
+  }
+
+  h1 {
+    padding-right: 200px;
+    font-size: 150px;
+    display: inline;
+  }
+
+  h2 {
+    margin-left: 30vw;
+    font-size: 90px;
+    }
+
+  #special {
+    margin-top: -4vh;
+    margin-left: 32vw;    
+    font-size: 135px;
+  }
+}
+
+.click-announce {
+  font-family: $lato;
+  font-size: 20px;
+  margin-top: -15vh;
+  margin-left: 37vw;
+  border: 1px solid black;
+  width: 250px;
+  padding: 10px 0px 10px 30px;
+}
+
+/* ---- begin particles.js ---- */
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 98vw;
+  height: 99vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+.particles-js-canvas-el{
+  margin-top: -97vh;
+  color: black;
+  width: 98vw;
+  height: 110vh;
+}
+
+/*----begin chapter 1 announcement----*/
+
+.announcement {
+  display:none;
+  border: 1.5em solid black;
+  width: 97vw;
+  height: 93vh;
+
+
+  h2 {
+    margin-top: 14vh;
+    margin-left: 34vw;
+    font-family: $lato;
+    font-size: 90px;
+  }
+  
+  h4 {
+    margin-left: 24vw;
+    font-family: $josefin;
+    font-size: 80px;
+  }
+}
+
+#parallaxContainer {
+  top: 0;
+  left: 0;
+  border: 1.5em solid black;
+  width: 200vw;
+  height: 98vh;
+  left:23px !important;
+  display: none;
+  overflow: hidden;
+  overflow-x: hidden;
+  
+  
+  .layer1 {
+    position: absolute;
+    left: 0;
+    width: 203vw;
+    height:100%;
+    overflow: hidden;
+    background: url('../images/scene1/alice-s1-landscape.png');
+    background-size: 380vh;
+    background-repeat: no-repeat;
+  }
+  
+  i.fa-arrow-right {
+    margin-top: 70vh;
+    margin-left: 54vw;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    opacity: 1;
+    animation: arrow 3s infinite 5s;
+  }
+
+  .layer2 {
+    left: 0;
+    position:absolute;
+    width: 200vw;
+    height: 100vh;
+    background: url('../images/scene1/alice-s1-clouds.png');
+    background-repeat: no-repeat;
+  }
+
+  .white-rabbit {
+    position: absolute;
+    margin-left: -98vw;
+    margin-top: 47vh;
+    background-repeat: no-repeat;
+    animation-name: rabbit;
+    animation-duration: 8s;
+    animation-delay: 15s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+
+  .hill {
+    position: absolute;
+    background: url('../images/scene1/alice-s1-hill.png');
+    background-repeat: no-repeat;
+    background-size: 80vh;
+    margin-left: 135vw;
+    margin-top: 28vh;
+    width: 50vw;
+    height: 50vh;
+  }
+
+  .rabbit-next {
+    position: absolute;
+    background-color: #7e0f7d; 
+    color: white;
+    border-radius: 50px;
+    font-family: $josefin;
+    margin-top: 80vh;
+    margin-left: 150vw;
+    width: 65px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 5px;
+    z-index: 1;
+    font-size: 30px;
+
+    &:hover {
+     background-color: #5AAD15;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
+  }
+}
+
+#page-1-text{
+  background-color: #000000eb;
+  display: block;
+  position: absolute;
+  font-family: $lato;
+  color: black;
+  z-index: 1;
+  width: 50vw;
+  height: 20vh;
+  font-size: 20px;
+
+  div#p1 {
+    margin-top: 2vh;
+    animation-name: paragraph1;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  div#p2{
+    margin-left: 77vw;
+    margin-top: -37vh;
+    width: 50vw;
+    float: left;
+    animation-name: paragraph2;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+  }
+}  
+
+/*----rabbit hole----*/
+
+
+#rabbit-hole {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
+  width: 100vw;
+  height: 97vh;
+  left:23px !important;
+  display: none;
+  overflow-x: hidden;
+
+  #s2-background{
+    width: 200vw;
+    height: 200vh;
+    background-size: 250vh;
+    background: url('../images/scene2/alice-s2-background.png');
+    background-repeat: no-repeat;
+  }
+
+  #hole-dots{
+    background: url('../images/scene2/hole-dots.png');
+    width: 200vw;
+    height: 200vh;
+    margin-top: -200vh;
+    margin-left: 45vw;
+    z-index: 10;
+    background-repeat: no-repeat;
+    animation:rabbit-hole-dots 3s infinite;
+  }
+
+  .falling-next{
+    position: absolute;
+    background-color: rgb(52, 173, 101); 
+    color: white;
+    border-radius: 50px;
+    font-family: $josefin;
+    margin-top: -120vh;
+    margin-left: 65vw;
+    width: 65px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 5px;
+    z-index: 100;
+    font-size: 30px;
+    
+     &:hover {
+     background-color: #CF3E79;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
+
+  }
+  
+  #rabbit-hole-text{
+  background-color: #000000eb;
+  display: block;
+  position: absolute;
+  font-family: $lato;
+  color: white;
+  z-index: 1;
+  margin-top: 50vh;
+  margin-left: 20px;
+  width: 50vw;
+  height: 20vh;
+  font-size: 24px;
+  animation-name: paragraph3;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-time: 1;
+  animation-fill-mode: forwards;
+ 
+  }
+}
+
+
+/*----falling----*/
+
+#falling{
+  width: 100vw;
+  height: 600vh;
+  display: none;
+
+  .fa-arrow-down{
+    position: absolute;
+    color: white;
+    font-size: 60px;
+    margin-top: 8vh;
+    margin-left: 30vw;
+    animation: arrow 3s infinite;
+  }
+  
+  #marmelaide{
+    position: absolute;
+    background-image:url("../images/marmelade.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #falling-text{
+    background-color: black;
+    float: right;
+    display: block;
+    position: absolute;
+    font-family: $lato;
+    color: white;
+    z-index: 100;
+    margin-top: 40vh;
+    margin-left: 69vw;
+    width: 30vw;
+    height: 200vh;
+    font-size: 24px;
+
+    div{
+      padding-top: 30px;
+    }
+  
+  }
+
+  #s3-background{
+    width: 100vw;
+    height: 600vh;
+    background-color: black;
+  }
+
+  #alice-falling{
+    position: fixed;
+    width: 100vw;
+    height: 600vh;
+    margin-top: -600vh;
+    margin-left: 40vw;
+    background: url('../images/scene3/alice-falling.png');
+    background-repeat: no-repeat;
+  }
+
+  #bright-dots{
+    position: absolute;
+    background: url('../images/scene3/alice-s3-bright-dots.png');
+    width: 100vw;
+    height: 600vh;
+    margin-top: -600vh;
+    z-index: 10;
+    background-repeat: no-repeat repeat;
+    overflow: hidden;
+  }
+
+  #grey-dots{
+    position: absolute;
+    background: url('../images/scene3/alice-s3-grey-dots.png');
+    width: 100vw;
+    height: 600vh;
+    margin-top: -600vh;
+    z-index: 10;
+    background-repeat: no-repeat repeat;
+    overflow: hidden;
+  }
+ /* =====do parallax instead====*/
+
+ #hallway-next{
+    position: absolute;
+    background-color: rgb(94, 195, 243); 
+    color: white;
+    border-radius: 50px;
+    font-family: $josefin;
+    margin-top: -15vh;
+    margin-left: 67vw;
+    width: 65px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 5px;
+    z-index: 100;
+    font-size: 30px;
+
+     &:hover {
+     background-color: #FF7D5B;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
+ }
+}  
+
+
+
+/*----hallway----*/
+
+#hallway {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
+  width: 100vw;
+  height: 97vh;
+  left:23px !important;
+  display: none;
+  overflow: hidden;
+
+  #hallway-text {
+   /* background-color: #000000eb;*/
+    display: block;
+    position: absolute;
+    font-family: $lato;
+    color: black;
+    z-index: 10;
+    margin-top: 45vh;
+    margin-left: 32vw;
+    width: 50vw;
+    height: 20vh;
+    font-size: 20px;
+    animation-name: hallway-text;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
+  }
+
+
+  #s4-background{
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/scene4/alice-s4-background.png');
+    background-repeat: no-repeat;
+  }
+
+  #s4-dots {
+    position: absolute;
+    margin-top: -100vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: url('../images/scene4/alice-s4-dots.png');
+    background-repeat: no-repeat;
+    animation: hallway-dots 10s ease infinite;
+  }
+}
+
+
+#glass-next {
+  position: absolute;
+  background-color: #2E3192; 
+  color: white;
+  border-radius: 50px;
+  font-family: $josefin;
+  margin-top: -15vh;
+  margin-left: 67vw;
+  width: 65px;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 5px;
+  z-index: 1;
+  font-size: 30px;
+
+    &:hover {
+     background-color: #51268E;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
+}
+
+
+
+/*----glass table----*/  
+
+#glass-table {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
+  width: 100vw;
+  height: 97vh;
+  left:23px !important;
+  display: none;
+  overflow: hidden;
+
+  #glass-table-text{
+    display: block;
+    position: absolute;
+    font-family: $lato;
+    color: black;
+    z-index: 100;
+    margin-left: 42vw;
+    margin-top: 81px;
+    width: 31vw;
+    /* height: 8vh; */
+    font-size: 18px;
+    /*background-color: #656565;*/
+    animation-name: glass-table-text;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
+  }
+
+
+  #s5-background{
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/scene5/alice-s5-background.png');
+    background-repeat: no-repeat;
+  }
+
+  #s5-alice{
+    position: absolute;
+    z-index: 10;
+    margin-top: -45vh;
+    margin-left: 60vw;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/scene5/alice-s5-alice.png');
+    background-repeat: no-repeat;
+  }
+  #s5-dots{
+    position: absolute;
+    z-index: 10;
+    margin-top: -101vh;
+    margin-left: 10vw;
+    width: 150%;
+    height: 150%;
+    background: url('../images/scene5/alice-s5-dots.png');
+    background-repeat: no-repeat;
+    animation: glass-table-dots 3s infinite;
+  }
+
+
+}
+
+#wonderland-next {
+  position: absolute;
+  background-color: #7ACCC8; 
+  color: white;
+  border-radius: 50px;
+  font-family: $josefin;
+  margin-top: -15vh;
+  margin-left: 67vw;
+  width: 65px;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 5px;
+  z-index: 20;
+  font-size: 30px;
+
+    &:hover {
+     background-color: #FE989B;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
+}
+
+/*----glimpse of wonderland----*/
+
+#glimpse {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
+  width: 100vw;
+  height: 97vh;
+  left:23px !important;
+  display: none;
+  overflow: hidden;
+  background-color: black;
+
+  #glimpse-text{
+    display: block;
+    position: absolute;
+    font-family: $lato;
+    color: white;
+    z-index: 10;
+    margin-left: 30px;
+    margin-top: 72vh;
+    width: 80vw;
+    height: 20vh;
+    font-size: 20px;
+    animation-name: glimpse-text;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
+  }
+
+
+  #s6-wonderland{
+    width: 100%;
+    height: 100%;
+    background: url('../images/scene6/alice-s6.png');
+    background-repeat: no-repeat;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
